@@ -1,0 +1,183 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1b1b2f; /* Dark space-like background */
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* Optional starry background */
+  background-size: cover;
+  animation: moveBackground 120s linear infinite; /* Animation to simulate moving stars */
+}
+
+@keyframes moveBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+header {
+  background-color: #0a0a1f; /* Darker shade for header */
+  color: #c42020;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  background-color: transparent; /* Make background transparent to let the hover effect show */
+  padding: 12px;
+  border-radius: 25px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  overflow: hidden; /* Ensures the circle doesn't go outside the button */
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 130%; /* Initial size of the background circle */
+  height: 90%;
+  background: linear-gradient(45deg, #ff6b6b, #f7d36d); /* Color gradient of the background */
+  transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+  border-radius: 50%;
+  z-index: -1; /* Position behind the text */
+  transform: translate(-50%, -50%);
+}
+
+nav a:hover {
+  color: white;
+  text-shadow: 0 0 15px rgba(155, 155, 155, 0.6); /* Optional glowing effect */
+}
+
+nav a:hover::before {
+  width: 200%; /* Expand the circle to a larger size */
+  height: 200%;
+  top: 50%;
+  left: 50%;
+  /* Optional: Add more transition effects to smooth the expansion */
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+
+a {
+  position: relative;
+  z-index: 1;
+}
+
+a:hover {
+  background-color: #7b8c98;
+  color: white;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Glowing effect */
+}
+
+.imh1 {
+  font-family: "Doto", sans-serif;
+  font-size: 60px;
+  text-align: center;
+  color: #1b1b2f; /* Dark text color */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.8); /* Inverse glowing effect */
+  animation: glowInverse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowInverse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.8), 0 0 50px rgba(255, 255, 255, 0.9);
+  }
+}
+
+.rmh1, .bmh1 {
+  font-family: "Zen Dots", sans-serif;
+  font-size: 40px;
+  color: #1b1b2f; /* Dark text color */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.8); /* Inverse glowing effect */
+  animation: pulseInverse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulseInverse {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    transform: scale(1.1);
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.8), 0 0 50px rgba(255, 255, 255, 0.9);
+  }
+}
+
+.ihh1, .rhh1, .bhh1 {
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 900;
+  margin-bottom: 45px;
+  color: #1b1b2f; /* Dark text color */
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Inverse glowing effect */
+}
+
+.imp {
+  color: #cfcfcf;
+  font-size: larger;
+  font-family: "Zen Dots", sans-serif;
+  text-align: center;
+  font-size: 45px;
+}
+
+.inav, .rnav, .bnav {
+  margin-bottom: 15px;
+}
+
+.res {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.res1 > h2 {
+  margin-right: 15px;
+  font-family: "Zen Dots", sans-serif;
+  color: rgb(211, 129, 62);
+  font-weight: 100;
+}
+
+.res2 > p {
+  color: rgb(199, 195, 185);
+  margin-bottom: 23px;
+  font-family: "Poppins", sans-serif;
+  font-size: large;
+}
+
+.res2 {
+  margin-top: 10px;
+  margin-left: 150px;
+}
+
+.biom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Adding glowing footer */
+footer {
+  background-color: #0a0a1f;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: "Zen Dots", sans-serif;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+footer a {
+  color: #ffd700; /* Golden color for links in footer */
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer a:hover {
+  color: #b5b5b5;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glowing effect */
+}
